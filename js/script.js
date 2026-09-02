@@ -131,13 +131,16 @@ if(tabSections.length){
   tabSections.forEach(s=>tabIo.observe(s));
 }
 
-// ============ PROJETO / EXECUÇÃO — ZIPPER REVEAL ============
-// The "execução" photo unzips left-to-right, following the cursor/finger position.
+// ============ PROJETO / EXECUÇÃO — DRAG TO REVEAL ============
+// A alça (botão ⟷) fica sempre visível e pode ser arrastada com mouse ou dedo
+// (Pointer Events cobrem os dois). A posição fica onde o usuário soltar —
+// não volta sozinha para a primeira imagem.
 document.querySelectorAll('.hover-compare').forEach(comp=>{
   const reveal = comp.querySelector('.reveal-layer');
   const seam = comp.querySelector('.compare-seam');
   const tagProjeto = comp.querySelector('.tag-projeto');
   const tagExecucao = comp.querySelector('.tag-execucao');
+  let dragging = false;
 
   function setPos(clientX){
     const r = comp.getBoundingClientRect();
@@ -145,22 +148,29 @@ document.querySelectorAll('.hover-compare').forEach(comp=>{
     pct = Math.max(0, Math.min(100, pct));
     reveal.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
     seam.style.left = pct + '%';
-    seam.style.opacity = '1';
     tagProjeto.style.opacity = pct > 55 ? '0' : '1';
     tagExecucao.style.opacity = pct > 45 ? '1' : '0';
   }
-  function reset(){
-    reveal.style.clipPath = 'inset(0 100% 0 0)';
-    seam.style.opacity = '0';
-    tagProjeto.style.opacity = '1';
-    tagExecucao.style.opacity = '0';
+
+  // Posição inicial ao meio, pra deixar a alça visível e óbvia de arrastar.
+  setPos(comp.getBoundingClientRect().left + comp.getBoundingClientRect().width / 2);
+
+  comp.addEventListener('pointerdown', e=>{
+    dragging = true;
+    comp.classList.add('dragging');
+    comp.setPointerCapture(e.pointerId);
+    setPos(e.clientX);
+  });
+  comp.addEventListener('pointermove', e=>{
+    if(!dragging) return;
+    setPos(e.clientX);
+  });
+  function stopDrag(e){
+    dragging = false;
+    comp.classList.remove('dragging');
   }
-  comp.addEventListener('mouseenter', e=> setPos(e.clientX));
-  comp.addEventListener('mousemove', e=> setPos(e.clientX));
-  comp.addEventListener('mouseleave', reset);
-  comp.addEventListener('touchstart', e=> setPos(e.touches[0].clientX), { passive:true });
-  comp.addEventListener('touchmove', e=> setPos(e.touches[0].clientX), { passive:true });
-  comp.addEventListener('touchend', reset);
+  comp.addEventListener('pointerup', stopDrag);
+  comp.addEventListener('pointercancel', stopDrag);
 });
 
 // ============ INSTAGRAM TAB (cosmetic) ============

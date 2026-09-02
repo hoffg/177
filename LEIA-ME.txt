@@ -1,0 +1,69 @@
+177 CONSTRUTORA — SITE
+========================
+
+É um site de página única (one page): todas as "telas" (Início, Sobre Nós,
+Serviços, Portfólio, Contato) vivem dentro do mesmo arquivo index.html,
+como seções da mesma página. O menu no topo rola suavemente até cada
+seção, e o link do menu acende sozinho conforme você navega — igual a um
+site profissional de página só.
+
+Estrutura do projeto:
+  index.html      -> O SITE (todas as seções: Início, Sobre Nós, Serviços,
+                      Portfólio e Contato, nessa ordem, uma embaixo da outra)
+  css/style.css   -> Todo o estilo visual (cores, fontes, animações)
+  js/script.js    -> Todas as interações (cursor, menu, reveals, slider, etc.)
+
+  sobre.html, servicos.html, portfolio.html, contato.html
+                  -> Não use mais estes arquivos diretamente. Ficaram apenas
+                     como redirecionamento automático para a seção
+                     correspondente dentro do index.html (caso algum link
+                     antigo aponte pra eles). Pode apagá-los se quiser —
+                     o site inteiro já está em index.html.
+
+Como visualizar:
+  Abra o index.html no navegador (funciona offline, sem precisar de
+  servidor). Use o menu do topo ou role a página normalmente.
+
+Sobre as fotos:
+  A maioria das fotos que você mandou já está no site, dentro da pasta
+  images/ (fachada da casa no topo, foto dos sócios em obra, os 3 cards
+  da equipe, as 4 fotos da "Execução Parte Cinza Global", as 2 fotos da
+  Casa Marel, a foto do escritório no Contato, etc.).
+
+  O bloco "Fidelidade em cada detalhe" (caminhão VW Icavel) agora usa as
+  fotos reais: o render 3D do projeto aparece normalmente e, ao passar o
+  mouse por cima, revela a foto real do caminhão executado (no celular,
+  um toque na foto faz a mesma troca).
+
+  As 3 fotos do "Renault Open" no Portfólio também já foram encaixadas.
+
+  Ainda ficaram como placeholder (bloco cinza listrado com etiqueta,
+  ainda sem foto real):
+    - 5 das 6 miniaturas do quadro do Instagram, no Contato
+  É só mandar essas fotos que eu encaixo do mesmo jeito.
+
+  Também ficaram guardadas (mas não usadas ainda) duas fotos de pessoas
+  da equipe que eu não sabia identificar — images/team-5-unconfirmed.png
+  (senhor de barba grisalha) e images/team-6-unconfirmed.png (rapaz de
+  barba). Me diga o nome e o cargo de cada um quando quiser que eu
+  adicione os cards deles em "Conheça nossa equipe".
+
+Animações incluídas:
+  - Cursor customizado que reage ao passar sobre links, cards e botões
+  - Barra de progresso de leitura no topo
+  - Cabeçalho que ganha fundo ao rolar a página
+  - Menu que destaca sozinho a seção em que você está (scrollspy)
+  - Textos e cards que aparecem suavemente conforme a rolagem (com atraso
+    em cascata nas listas e grades)
+  - Botões "magnéticos" que seguem levemente o cursor (CTAs e WhatsApp)
+  - Cards com leve efeito 3D ao passar o mouse (equipe, serviços)
+  - Zoom suave nas imagens do portfólio ao passar o mouse
+  - Contador animado ("+300 projetos executados")
+  - Projeto x Execução do caminhão VW Icavel: passe o mouse para revelar a foto real
+  - Abas com scroll suave em Serviços (177 Escritório / 177 Construtora)
+  - Menu mobile com transição suave
+  - Formulário de contato que monta e abre uma mensagem pronta no WhatsApp
+
+Contato usado no site: (46) 99935-7929 (wa.me/5546999357929)
+Instagram usado: @escritorio_177
+Endereço: R. Maranhão, 165 - Centro, Francisco Beltrão - PR, 85601-310

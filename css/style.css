@@ -223,18 +223,20 @@ h2.display{font:400 clamp(30px,4.2vw,54px)/1.04 "Anton",Impact,"Arial Narrow Bol
 .team-info span{display:block;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
 
 /* ============ PORTFOLIO ============ */
-.hover-compare{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:1400/985;cursor:ew-resize}
-.hover-compare .base,.hover-compare .reveal-layer{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.hover-compare{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:1400/985;cursor:ew-resize;touch-action:none;-webkit-user-select:none;user-select:none}
+.hover-compare .base,.hover-compare .reveal-layer{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none}
 .hover-compare .reveal-layer{clip-path:inset(0 100% 0 0);z-index:2}
 .hover-compare .compare-seam{
   position:absolute;top:0;bottom:0;left:0;width:2px;background:#fff;z-index:4;
-  opacity:0;transition:opacity .3s var(--ease);pointer-events:none;box-shadow:0 0 16px rgba(0,0,0,.35);
+  opacity:1;pointer-events:none;box-shadow:0 0 16px rgba(0,0,0,.35);
 }
 .hover-compare .compare-seam::after{
   content:"⟷";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-  width:44px;height:44px;background:#fff;color:#111;border-radius:50%;
-  display:grid;place-items:center;font-size:15px;box-shadow:0 8px 20px rgba(0,0,0,.4);
+  width:48px;height:48px;background:#fff;color:#111;border-radius:50%;
+  display:grid;place-items:center;font-size:16px;box-shadow:0 8px 20px rgba(0,0,0,.4);
+  cursor:grab;
 }
+.hover-compare.dragging .compare-seam::after{cursor:grabbing}
 .compare-tag{position:absolute;bottom:20px;z-index:5;font:700 12px "Inter",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;background:rgba(0,0,0,.55);padding:8px 14px;border-radius:30px;transition:opacity .3s var(--ease)}
 .compare-tag.tag-projeto{left:20px}
 .compare-tag.tag-execucao{right:20px;opacity:0}
@@ -255,7 +257,13 @@ h2.display{font:400 clamp(30px,4.2vw,54px)/1.04 "Anton",Impact,"Arial Narrow Bol
 .zoomable:hover .ph{transform:scale(1.06)}
 
 /* ============ CONTACT ============ */
-.contact-hero{min-height:56vh}
+.contact-hero{min-height:70vh;display:flex;align-items:center;justify-content:center}
+.contact-hero .hero-inner{
+  padding-left:24px;padding-right:24px;padding-bottom:0;
+  display:flex;flex-direction:column;align-items:center;text-align:center;
+}
+.contact-hero .eyebrow{justify-content:center}
+.contact-hero h1.display{margin:0 auto}
 .wa-btn{
   display:inline-flex;align-items:center;gap:12px;background:var(--whatsapp);color:#fff;
   padding:16px 26px;border-radius:40px;font:700 13px "Inter",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;letter-spacing:.05em;text-transform:uppercase;

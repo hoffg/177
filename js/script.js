@@ -190,7 +190,7 @@ if(contactForm){
     const telefone = contactForm.telefone.value.trim();
     const mensagem = contactForm.mensagem.value.trim();
     const texto = `Olá! Meu nome é ${nome}.%0A${mensagem}%0A(Contato: ${telefone})`;
-    window.open(`https://wa.me/5546999357929?text=${texto}`, '_blank');
+    window.open(`https://wa.me/554699700070?text=${texto}`, '_blank');
   });
 }
 

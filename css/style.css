@@ -169,13 +169,19 @@ h2.display{font:400 clamp(30px,4.2vw,54px)/1.04 "Anton",Impact,"Arial Narrow Bol
 }
 .badge-num{font:400 clamp(30px,4vw,44px) "Anton",Impact,"Arial Narrow Bold",sans-serif;color:var(--accent);line-height:1}
 .badge-label{font:800 12px "Inter",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;letter-spacing:.05em;text-transform:uppercase;line-height:1.35}
-.logos-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px 30px}
-.logo-chip{display:flex;align-items:center;gap:14px}
+.logos-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px 34px}
+.logo-chip{display:flex;align-items:center;gap:16px}
 .logo-circle{
   width:56px;height:56px;border-radius:50%;background:#efeeec;display:grid;place-items:center;
   font:800 13px "Inter",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:#333;flex:none;border:1px solid rgba(0,0,0,.06);
 }
-.logo-chip span{font-size:13px;color:#4c4a50}
+.logo-mark{
+  width:84px;height:84px;border-radius:18px;background:#efeeec;display:grid;place-items:center;
+  flex:none;border:1px solid rgba(0,0,0,.06);padding:13px;
+}
+.logo-mark img{width:100%;height:100%;object-fit:contain;display:block}
+.logo-mark img.logo-tight{width:78%;height:78%;margin:0 auto;align-self:center}
+.logo-chip span{font-size:14.5px;color:#4c4a50}
 .trust-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:60px;align-items:center}
 
 /* ============ SERVICES TABS (servicos page) ============ */
@@ -190,6 +196,7 @@ h2.display{font:400 clamp(30px,4.2vw,54px)/1.04 "Anton",Impact,"Arial Narrow Bol
 .services-list{display:grid;grid-template-columns:1fr 1fr;gap:44px 60px;margin-top:56px}
 .svc-item{display:flex;gap:18px}
 .svc-item .ico{width:26px;flex:none;padding-top:4px;color:var(--accent)}
+.svc-item .ico img{width:100%;height:auto;display:block}
 .svc-item.on-light .ico{color:var(--accent)}
 .svc-item h3{font:700 17px "Inter",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;margin-bottom:8px}
 .svc-item p{font-size:14.5px;line-height:1.7;color:var(--muted-dark)}
@@ -213,14 +220,23 @@ h2.display{font:400 clamp(30px,4.2vw,54px)/1.04 "Anton",Impact,"Arial Narrow Bol
 .tl-item p{color:var(--muted);font-size:13.5px;line-height:1.6}
 .about-photo{border-radius:18px;overflow:hidden;height:280px;margin-top:34px}
 
-.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:50px}
-.team-card{border-radius:16px;overflow:hidden;background:#111;color:var(--text)}
-.team-photo{height:300px;background:#fff}
-.team-photo img{object-position:top center}
-.team-info{padding:20px}
-.team-info small{color:var(--accent);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase}
-.team-info h3{font:700 18px "Inter",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;margin:8px 0 6px}
-.team-info span{display:block;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.team-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:24px;margin-top:60px}
+.team-grid .team-card{grid-column:span 2}
+.team-grid .team-card:nth-child(4){grid-column:2 / span 2}
+.team-grid .team-card:nth-child(5){grid-column:4 / span 2}
+.team-card{
+  position:relative;overflow:hidden;border-radius:20px;
+  background:#f3f3f5;
+  box-shadow:0 16px 34px rgba(17,17,17,.09);
+  aspect-ratio:4/3.3;
+}
+.team-photo{position:absolute;inset:0;z-index:0}
+.team-photo img{width:100%;height:100%;object-fit:cover;object-position:left center;display:block}
+.team-info{position:absolute;z-index:1;right:0;top:0;bottom:0;width:52%;display:flex;flex-direction:column;justify-content:center;padding:6% 6% 6% 8%}
+.team-info small{color:var(--muted);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+.team-info h3{font:700 19px "Inter",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:#111;margin:6px 0 3px;line-height:1.15}
+.team-crea{display:block;font:700 12px "Inter",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:#a9761c;letter-spacing:.02em;margin-bottom:6px}
+.team-info span{display:block;font-size:12.5px;color:#5c5c60;line-height:1.55}
 
 /* ============ PORTFOLIO ============ */
 .hover-compare{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:1400/985;cursor:ew-resize;touch-action:none;-webkit-user-select:none;user-select:none}
@@ -327,6 +343,9 @@ footer{padding:60px 0 26px;border-top:1px solid var(--line);background:#08080a}
 .footer-social a{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);transition:color .3s}
 .footer-social a:hover{color:#fff}
 .footer-social svg{width:18px;height:18px}
+.footer-powered{margin-top:34px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:center}
+.footer-powered img{height:18px;width:auto;opacity:.8;transition:opacity .3s}
+.footer-powered img:hover{opacity:1}
 
 /* ============ REVEAL ANIMATIONS ============ */
 .reveal{opacity:0;transform:translateY(46px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
@@ -345,6 +364,7 @@ footer{padding:60px 0 26px;border-top:1px solid var(--line);background:#08080a}
   .about-grid,.trust-grid,.split-2,.contact-grid{grid-template-columns:1fr}
   .services-list{grid-template-columns:1fr}
   .team-grid{grid-template-columns:repeat(2,1fr)}
+  .team-grid .team-card,.team-grid .team-card:nth-child(4),.team-grid .team-card:nth-child(5){grid-column:auto}
   .logos-grid{grid-template-columns:1fr}
   .split-3{grid-template-columns:1fr}
   .contact-grid{margin-top:20px}
@@ -363,12 +383,14 @@ footer{padding:60px 0 26px;border-top:1px solid var(--line);background:#08080a}
   .pillcard[style*="margin-top:-100px"]{margin-top:-60px!important}
   .trust-head{margin-bottom:34px}
   .badge{padding:14px 22px;gap:10px}
-  .team-photo{height:250px}
+  .team-card{aspect-ratio:4/3.9}
+  .team-info{width:56%;padding:7% 6% 7% 9%}
   .about-photo{height:220px;margin-top:26px}
   .zoomable[style*="height:340px"]{height:220px!important}
   .cta-box{padding:36px;display:block;text-align:left}
   .cta-box .wa-btn,.cta-box .btn-contato{margin-top:20px}
   .team-grid{grid-template-columns:1fr}
+  .team-grid .team-card,.team-grid .team-card:nth-child(4),.team-grid .team-card:nth-child(5){grid-column:auto}
   .mosaic{grid-template-columns:1fr}
   .mosaic .item{height:220px}
   .split-3 .zoomable[style*="height:260px"]{height:220px!important}

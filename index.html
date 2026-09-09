@@ -15,7 +15,7 @@
 <header id="site-header">
   <div class="container nav-wrap">
     <a href="#inicio" class="brand">
-      <img class="brand-logo" src="images/logo-177.png" alt="177 Construtora">
+      <img class="brand-logo brand-logo-mark" src="images/logo-177-mark.png" alt="177 Construtora">
     </a>
     <nav class="main-nav">
       <a href="#inicio">Início</a>
@@ -55,15 +55,6 @@
         <div class="section-label on-light">Como trabalhamos</div>
         <h2 class="display" style="font-size:clamp(26px,3.4vw,40px);color:#111">Com você do início ao fim.</h2>
         <div style="display:grid;gap:18px;margin-top:34px" class="stagger">
-          <a href="#servicos" class="service-block stg" data-tilt data-scroll-tab="#escritorio">
-            <span class="icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 19V7l8-4 8 4v12"/><path d="M9 19v-6h6v6"/></svg>
-            </span>
-            <div>
-              <h3>177 Escritório</h3>
-              <p>No Escritório 177 é onde <strong>seu sonho é preparado</strong> — nossa equipe desenvolve seu projeto com inovação, qualidade e eficácia. Projetos estruturais, elétricos, hidrossanitários e de prevenção contra incêndios, além de laudos, perícias e assessoria técnica.</p>
-            </div>
-          </a>
           <a href="#servicos" class="service-block stg" data-tilt data-scroll-tab="#construtora">
             <span class="icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 21h18"/><path d="M5 21V9l6-4 6 4v12"/><path d="M9 21v-6h4v6"/></svg>
@@ -71,6 +62,15 @@
             <div>
               <h3>177 Construtora</h3>
               <p>Na Construtora 177, <strong>seu sonho se torna realidade</strong>. Cuidamos da sua obra do início ao fim, com qualidade, eficiência e confiança — da mão de obra da parte cinza à entrega completa, chave na mão.</p>
+            </div>
+          </a>
+          <a href="#servicos" class="service-block stg" data-tilt data-scroll-tab="#escritorio">
+            <span class="icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 19V7l8-4 8 4v12"/><path d="M9 19v-6h6v6"/></svg>
+            </span>
+            <div>
+              <h3>177 Engenharia Civil</h3>
+              <p>Na 177 Engenharia Civil é onde <strong>seu sonho é preparado</strong> — nossa equipe desenvolve seu projeto com inovação, qualidade e eficácia. Projetos estruturais, elétricos, hidrossanitários e de prevenção contra incêndios, além de laudos, perícias e assessoria técnica.</p>
             </div>
           </a>
         </div>
@@ -87,17 +87,27 @@
           <span class="badge-label">projetos<br>executados</span>
         </span>
       </div>
+      <div class="section-label on-light reveal" style="margin-bottom:26px">Clientes Atendidos</div>
       <div class="trust-grid">
         <div class="logos-grid reveal-left">
           <div class="logo-chip"><span class="logo-mark"><img src="images/logo-msa.png" alt="Grupo MSA"></span><span>Grupo MSA</span></div>
           <div class="logo-chip"><span class="logo-mark"><img class="logo-tight" src="images/logo-renault.png" alt="Renault"></span><span>Renault Open</span></div>
-          <div class="logo-chip"><span class="logo-mark"><img src="images/logo-difer.png" alt="Difer Ferragens"></span><span>Difer Ferragens</span></div>
+          <div class="logo-chip"><span class="logo-mark"><img src="images/logo-difer.png" alt="Difer - Ferros"></span><span>Difer - Ferros</span></div>
           <div class="logo-chip"><span class="logo-mark"><img src="images/logo-vw.png" alt="Volkswagen"></span><span>VW Icavel</span></div>
           <div class="logo-chip"><span class="logo-mark"><img src="images/logo-cresol.png" alt="Cresol"></span><span>Cresol Baser</span></div>
-          <div class="logo-chip"><span class="logo-mark"><img src="images/logo-bemviver.png" alt="Rede Bem Viver"></span><span>Rede Bem Viver</span></div>
+          <div class="logo-chip"><span class="logo-mark"><img src="images/logo-bemviver.png" alt="Difer - Bem viver"></span><span>Difer - Bem viver</span></div>
         </div>
         <div class="zoomable reveal-right" style="height:340px">
           <img src="images/detail-tablet-wall.jpg" alt="Equipe 177 analisando projeto em tablet">
+        </div>
+      </div>
+      <div class="reveal" style="margin-top:60px">
+        <div class="section-label on-light">Parceiros Homologados</div>
+        <div class="partners-grid stagger" style="margin-top:34px">
+          <div class="partner-logo stg"><img src="images/partner-marina-urio.png" alt="Marina Urio Arquitetura"></div>
+          <div class="partner-logo partner-logo-lg stg"><img src="images/partner-nima.png" alt="NIMA Arquitetos"></div>
+          <div class="partner-logo stg"><img src="images/partner-amanda-albanez.png" alt="Amanda Albanez Arquitetura"></div>
+          <div class="partner-logo partner-logo-md stg"><img src="images/partner-gustavo-araujo.png" alt="Gustavo Araújo Arquitetura"></div>
         </div>
       </div>
     </div>
@@ -216,8 +226,36 @@
       <div class="section-label reveal">O que fazemos</div>
       <h2 class="display reveal" style="margin-top:12px">Serviços<br><span class="accent-word">prestados.</span></h2>
       <div class="hero-tabs reveal">
-        <button class="tab-btn solid" data-scroll-tab="#escritorio">177 Escritório</button>
-        <button class="tab-btn" data-scroll-tab="#construtora">177 Construtora</button>
+        <button class="tab-btn solid" data-scroll-tab="#construtora">177 Construtora</button>
+        <button class="tab-btn" data-scroll-tab="#escritorio">177 Engenharia Civil</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="section dark" id="construtora" data-tab-section>
+    <div class="container">
+      <div class="reveal" style="display:flex;align-items:center;gap:16px">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M3 21h18"/><path d="M5 21V9l6-4 6 4v12"/><path d="M9 21v-6h4v6"/></svg>
+        <h2 class="display" style="font-size:clamp(26px,3.2vw,38px)">177 Construtora</h2>
+      </div>
+
+      <div class="services-list stagger">
+        <div class="svc-item on-dark stg">
+          <span class="ico"><img src="images/icon-svc-trowel.png" alt=""></span>
+          <div><h3>Mão de Obra — Parte Cinza</h3><p>Execução da mão de obra da parte cinza da obra, abrangendo as etapas desde a fundação até o reboco. O serviço contempla a execução das etapas construtivas previstas no escopo contratado, sem o fornecimento de materiais e insumos.</p></div>
+        </div>
+        <div class="svc-item on-dark stg">
+          <span class="ico"><img src="images/icon-svc-key.png" alt=""></span>
+          <div><h3>Chave na Mão — Obra Completa</h3><p>Solução completa para quem busca receber a obra pronta. Abrange todas as etapas da construção, desde a fundação até os acabamentos finais, incluindo mão de obra, materiais e o acompanhamento de todo o processo de execução.</p></div>
+        </div>
+        <div class="svc-item on-dark stg">
+          <span class="ico"><img src="images/icon-svc-trowel-bricks.png" alt=""></span>
+          <div><h3>Parte Cinza</h3><p>Execução completa da parte cinza da obra, com mão de obra e materiais inclusos. Abrange as principais etapas construtivas desde a fundação até o reboco, proporcionando ao cliente maior praticidade e controle durante essa fase da obra.</p></div>
+        </div>
+        <div class="svc-item on-dark stg">
+          <span class="ico"><img src="images/icon-svc-checklist.png" alt=""></span>
+          <div><h3>Administração de Obra</h3><p>Gerenciamento e acompanhamento da obra, incluindo controle de materiais, notas fiscais, valores, cotações e compras, buscando as melhores condições e o melhor custo-benefício para cada etapa da construção.</p></div>
+        </div>
       </div>
     </div>
   </div>
@@ -226,7 +264,7 @@
     <div class="container">
       <div class="reveal" style="display:flex;align-items:center;gap:16px">
         <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.5"><path d="M4 19V7l8-4 8 4v12"/><path d="M9 19v-6h6v6"/></svg>
-        <h2 class="display" style="font-size:clamp(26px,3.2vw,38px);color:#111">177 Escritório</h2>
+        <h2 class="display" style="font-size:clamp(26px,3.2vw,38px);color:#111">177 Engenharia Civil</h2>
       </div>
 
       <div class="services-list stagger">
@@ -261,34 +299,6 @@
       </div>
     </div>
   </div>
-
-  <div class="section dark" id="construtora" data-tab-section>
-    <div class="container">
-      <div class="reveal" style="display:flex;align-items:center;gap:16px">
-        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M3 21h18"/><path d="M5 21V9l6-4 6 4v12"/><path d="M9 21v-6h4v6"/></svg>
-        <h2 class="display" style="font-size:clamp(26px,3.2vw,38px)">177 Construtora</h2>
-      </div>
-
-      <div class="services-list stagger">
-        <div class="svc-item on-dark stg">
-          <span class="ico"><img src="images/icon-svc-trowel.png" alt=""></span>
-          <div><h3>Mão de Obra — Parte Cinza</h3><p>Execução da mão de obra da parte cinza da obra, abrangendo as etapas desde a fundação até o reboco. O serviço contempla a execução das etapas construtivas previstas no escopo contratado, sem o fornecimento de materiais e insumos.</p></div>
-        </div>
-        <div class="svc-item on-dark stg">
-          <span class="ico"><img src="images/icon-svc-key.png" alt=""></span>
-          <div><h3>Chave na Mão — Obra Completa</h3><p>Solução completa para quem busca receber a obra pronta. Abrange todas as etapas da construção, desde a fundação até os acabamentos finais, incluindo mão de obra, materiais e o acompanhamento de todo o processo de execução.</p></div>
-        </div>
-        <div class="svc-item on-dark stg">
-          <span class="ico"><img src="images/icon-svc-trowel-bricks.png" alt=""></span>
-          <div><h3>Parte Cinza Global</h3><p>Execução completa da parte cinza da obra, com mão de obra e materiais inclusos. Abrange as principais etapas construtivas desde a fundação até o reboco, proporcionando ao cliente maior praticidade e controle durante essa fase da obra.</p></div>
-        </div>
-        <div class="svc-item on-dark stg">
-          <span class="ico"><img src="images/icon-svc-checklist.png" alt=""></span>
-          <div><h3>Administração de Obra</h3><p>Gerenciamento e acompanhamento da obra, incluindo controle de materiais, notas fiscais, valores, cotações e compras, buscando as melhores condições e o melhor custo-benefício para cada etapa da construção.</p></div>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
 <!-- ============ PORTFÓLIO ============ -->
@@ -315,12 +325,12 @@
 
   <div class="section light">
     <div class="container">
-      <div class="reveal gallery-title" style="color:#555">Execução Parte Cinza Global</div>
+      <div class="reveal gallery-title" style="color:#555">Execução Parte Cinza</div>
       <div class="mosaic stagger">
-        <div class="item stg zoomable"><span class="num">1</span><img src="images/portfolio-cinza-1.jpg" alt="Execução parte cinza global — etapa 1"></div>
-        <div class="item stg zoomable"><span class="num">2</span><img src="images/portfolio-cinza-2.jpg" alt="Execução parte cinza global — etapa 2"></div>
-        <div class="item stg zoomable"><span class="num">3</span><img src="images/portfolio-cinza-3.jpg" alt="Execução parte cinza global — etapa 3"></div>
-        <div class="item stg zoomable"><span class="num">4</span><img src="images/portfolio-cinza-4.jpg" alt="Execução parte cinza global — etapa 4"></div>
+        <div class="item stg zoomable"><span class="num">1</span><img src="images/portfolio-cinza-1.jpg" alt="Execução parte cinza — etapa 1"></div>
+        <div class="item stg zoomable"><span class="num">2</span><img src="images/portfolio-cinza-2.jpg" alt="Execução parte cinza — etapa 2"></div>
+        <div class="item stg zoomable"><span class="num">3</span><img src="images/portfolio-cinza-3.jpg" alt="Execução parte cinza — etapa 3"></div>
+        <div class="item stg zoomable"><span class="num">4</span><img src="images/portfolio-cinza-4.jpg" alt="Execução parte cinza — etapa 4"></div>
       </div>
     </div>
   </div>

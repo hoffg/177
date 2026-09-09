@@ -71,10 +71,10 @@ nav.main-nav a.active{background:rgba(255,255,255,.1);color:#fff}
 }
 .btn-contato:hover{background:var(--accent);transform:translateY(-2px)}
 
-.burger{display:none;width:42px;height:42px;border:1px solid var(--line);border-radius:50%;place-items:center;flex-direction:column;gap:4px}
+.burger{display:none;width:42px;height:42px;border:1px solid var(--line);border-radius:50%;justify-content:center;align-items:center;flex-direction:column;gap:2px}
 .burger span{width:16px;height:1.5px;background:#fff;display:block;transition:.3s}
 .mobile-nav{
-  position:fixed;inset:84px 0 0 0;background:rgba(8,8,9,.98);backdrop-filter:blur(10px);
+  position:fixed;inset:84px 0 0 0;background:var(--bg);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
   z-index:85;display:flex;flex-direction:column;padding:20px 24px;gap:2px;
   transform:translateY(-12px);opacity:0;pointer-events:none;transition:.35s var(--ease);
 }
@@ -85,7 +85,7 @@ nav.main-nav a.active{background:rgba(255,255,255,.1);color:#fff}
 
 @media(max-width:900px){
   nav.main-nav{display:none}
-  .burger{display:grid}
+  .burger{display:flex}
 }
 
 /* ============ HERO ============ */
@@ -201,7 +201,7 @@ h2.display{font:400 clamp(30px,4.2vw,54px)/1.04 "Anton",Impact,"Arial Narrow Bol
 
 .services-list{display:grid;grid-template-columns:1fr 1fr;gap:44px 60px;margin-top:56px}
 .svc-item{display:flex;gap:18px}
-.svc-item .ico{width:26px;flex:none;padding-top:4px;color:var(--accent)}
+.svc-item .ico{width:16px;flex:none;padding-top:4px;color:var(--accent)}
 .svc-item .ico img{width:100%;height:auto;display:block}
 .svc-item.on-light .ico{color:var(--accent)}
 .svc-item h3{font:700 17px "Inter",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;margin-bottom:8px}
